@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>VaperShop - Tu tienda especializada en vapers de calidad</title>
+    <meta name="description"
+        content="Tienda especializada en vapers de alta calidad. Encuentra tu modelo ideal con la mejor calidad y precio. Consultas directas por WhatsApp.">
+    <meta name="keywords" content="vapers, cigarrillos electrónicos, vapeadores, comprar vapers, tienda de vapers">
+    <meta property="og:title" content="VaperShop - Tu tienda de vapers">
+    <meta property="og:description"
+        content="Los mejores vapers del mercado con atención personalizada. Consulta por WhatsApp.">
+    <meta property="og:image" content="img/tienda de vaper.jpeg">
+    <meta property="og:url" content="https://www.vapershop.com">    <meta name="theme-color" content="#3498db">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="icon" href="img/favicon para la pagina.avif" type="image/avif">
+    <link rel="shortcut icon" href="img/favicon para la pagina.avif" type="image/avif">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>VaperShop</h1>
+                <button class="menu-toggle" id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Los mejores vapers del mercado</h2>
+                <p>Encuentra tu modelo ideal con la mejor calidad y precio.</p>
+                <a href="#productos" class="btn">Ver Productos</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="ofertas" class="ofertas">
+        <div class="container">
+            <h2 class="section-title">Ofertas Especiales</h2>
+            <div class="ofertas-grid" id="ofertas-container">
+                <!-- Las ofertas se cargarán desde JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <section id="productos" class="productos">
+        <div class="container">
+            <h2 class="section-title">Nuestros Productos</h2>
+            <div class="productos-grid" id="productos-container">
+                <!-- Los productos se cargarán desde JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <section id="nosotros" class="nosotros">
+        <div class="container">
+            <h2 class="section-title">Sobre Nosotros</h2>
+            <div class="nosotros-content">
+                <div class="nosotros-texto">
+                    <p>Somos una tienda especializada en vapers de alta calidad. Nuestro objetivo es ofrecer los mejores
+                        productos del mercado con un servicio personalizado para que encuentres exactamente lo que
+                        buscas.</p>
+                    <p>Todos nuestros productos son originales y contamos con garantía en cada uno de ellos.</p>
+                </div>
+                <div class="nosotros-imagen">
+                    <img src="img/tienda de vaper.jpeg" alt="Nuestra tienda" class="placeholder-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contacto">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            <div class="contacto-info">
+                <div class="contacto-metodo">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>WhatsApp</h3>
+                    <p>Contáctanos directamente por WhatsApp para realizar pedidos o consultas.</p>
+                    <a href="https://wa.me/34XXXXXXXXX" class="btn btn-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> Enviar mensaje
+                    </a>
+                </div>
+                <div class="contacto-metodo">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Ubicación</h3>
+                    <p>Visítanos en nuestra tienda física:</p>
+                    <address>Calle Principal #123, Ciudad</address>
+                </div>
+                <div class="contacto-metodo">
+                    <i class="far fa-clock"></i>
+                    <h3>Horario</h3>
+                    <p>Lunes a Viernes: 10:00 - 20:00</p>
+                    <p>Sábados: 10:00 - 14:00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Marcos Oyola - Todos los derechos reservados</p>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/34XXXXXXXXX?text=Hola,%20me%20gustaría%20información%20sobre%20sus%20productos"
+        class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <script src="js/productos.js"></script>
+    <script src="js/whatsapp-integration.js"></script>
+    <script src="js/mobile-optimizations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

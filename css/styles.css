@@ -1,0 +1,1147 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #333;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #3498db, #2980b9);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-whatsapp {
+    background-color: #25D366;
+}
+
+.btn-whatsapp:hover {
+    background-color: #128C7E;
+}
+
+/* Header */
+header {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+header h1 {
+    color: #3498db;
+    font-size: 1.8rem;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #3498db;
+}
+
+/* Sección Hero */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/hero para vape shop.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 150px 0;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-bottom: 4px solid rgba(52, 152, 219, 0.7);
+    /* Efecto parallax solo para escritorio */
+    background-attachment: fixed;
+    /* Animación suave al cargar */
+    animation: heroFade 1s ease-in-out;
+    /* Aseguramos que sea responsive */
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+@keyframes heroFade {
+    from {
+        opacity: 0.7;
+        transform: scale(1.02);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
+    z-index: 1;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    /* Pequeña animación de entrada */
+    animation: heroContentFade 1.2s ease-out;
+}
+
+@keyframes heroContentFade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero h2 {
+    font-size: 3.2rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9), 0 0 20px rgba(52, 152, 219, 0.7);
+    color: #ffffff;
+    font-weight: 800;
+    letter-spacing: 1px;
+    /* Efecto de borde neón */
+    -webkit-text-stroke: 1px rgba(83, 189, 255, 0.3);
+    /* Animación de pulsado sutíl para el título */
+    animation: pulseText 3s infinite ease-in-out;
+}
+
+/* Animación de pulsado para el texto del hero */
+@keyframes pulseText {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.9;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.95), 0 0 25px rgba(52, 152, 219, 0.9);
+    }
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9), 0 0 15px rgba(52, 152, 219, 0.7);
+    font-weight: 400;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero .btn {
+    background-color: rgba(52, 152, 219, 0.85);
+    padding: 14px 32px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 30px;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3), 0 0 10px rgba(52, 152, 219, 0.6);
+    transition: all 0.4s ease;
+    /* Efecto de brillo en el botón */
+    position: relative;
+    overflow: hidden;
+}
+
+.hero .btn:after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(30deg);
+    transition: all 0.6s;
+    opacity: 0;
+}
+
+.hero .btn:hover:after {
+    opacity: 1;
+    transform: rotate(30deg) translate(-30%, -30%);
+}
+
+.hero .btn:hover {
+    background-color: rgba(41, 128, 185, 0.95);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), 0 0 20px rgba(52, 152, 219, 0.8);
+}
+
+/* Sección de Productos */
+.productos {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.producto {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.producto-img {
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+
+.producto-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.producto:hover .producto-img img {
+    transform: scale(1.1);
+}
+
+.producto-info {
+    padding: 20px;
+}
+
+.producto-nombre {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.producto-descripcion {
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+}
+
+.producto-precio {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #3498db;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.producto-acciones {
+    display: flex;
+    justify-content: space-between;
+}
+
+.producto-acciones .btn {
+    flex: 1;
+    text-align: center;
+    margin: 0 5px;
+    padding: 10px;
+}
+
+/* Estilos para características de productos */
+.producto-caracteristicas {
+    margin: 15px 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.producto-caracteristicas li {
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.producto-caracteristicas li i {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    color: #25D366;
+}
+
+/* Etiqueta de categoría */
+.producto-categoria {
+    display: inline-block;
+    font-size: 0.75rem;
+    padding: 3px 8px;
+    background-color: #f0f0f0;
+    border-radius: 3px;
+    color: #666;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+/* Etiqueta de popular */
+.badge-popular {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff5252;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+/* Badges de disponibilidad */
+.producto-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    z-index: 10;
+}
+
+.producto-badge.disponible {
+    background-color: #25D366;
+    color: white;
+}
+
+.producto-badge.agotado {
+    background-color: #e74c3c;
+    color: white;
+}
+
+/* Sección Nosotros */
+.nosotros {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+}
+
+.nosotros-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.nosotros-texto {
+    flex: 1;
+}
+
+.nosotros-texto p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.nosotros-imagen {
+    flex: 1;
+}
+
+.nosotros-imagen img {
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Sección Contacto */
+.contacto {
+    padding: 80px 0;
+    background-color: #fff;
+    position: relative;
+}
+
+/* Fondo con patrón sutil */
+.contacto::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(52, 152, 219, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.contacto-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    position: relative;
+}
+
+.contacto-metodo {
+    text-align: center;
+    padding: 30px;
+    border-radius: 12px;
+    background-color: #f9f9f9;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border-top: 3px solid #3498db;
+}
+
+.contacto-metodo:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.contacto-metodo i {
+    font-size: 2.5rem;
+    color: #3498db;
+    margin-bottom: 20px;
+}
+
+.contacto-metodo h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.contacto-metodo p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.contacto-metodo .btn {
+    margin-top: 10px;
+}
+
+/* Sección Ofertas */
+.ofertas {
+    padding: 60px 0;
+    background-color: #f5f5f5;
+    position: relative;
+}
+
+.ofertas::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(52, 152, 219, 0.05) 0%, rgba(41, 128, 185, 0.05) 100%);
+    z-index: 0;
+}
+
+.ofertas .container {
+    position: relative;
+    z-index: 1;
+}
+
+.ofertas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.oferta {
+    background-color: white;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    border-top: 3px solid #25D366;
+}
+
+.oferta:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.oferta h3 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.oferta p {
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.codigo-oferta {
+    display: inline-block;
+    background-color: #f9f9f9;
+    padding: 8px 15px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.codigo-oferta strong {
+    color: #25D366;
+    font-weight: bold;
+}
+
+.oferta .btn-whatsapp {
+    margin-top: 10px;
+    width: 100%;
+}
+
+/* Botón flotante de WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    /* Efecto de pulsación continuo */
+    animation: pulseButton 2s infinite ease-in-out;
+}
+
+/* Animación de pulsado para el botón de WhatsApp */
+@keyframes pulseButton {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.whatsapp-float:hover {
+    background-color: #128C7E;
+    transform: scale(1.1);
+    animation: none;
+    /* Detener la animación cuando se pasa el mouse por encima */
+}
+
+/* Estilos para el menú hamburguesa - Mejorado */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 10px;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu-toggle:hover {
+    color: #3498db;
+    background-color: rgba(52, 152, 219, 0.1);
+    transform: scale(1.05);
+}
+
+/* Animación para el menú hamburguesa */
+.menu-toggle i {
+    transition: transform 0.3s ease;
+}
+
+.menu-toggle.active i {
+    transform: rotate(90deg);
+}
+
+/* Indica visualmente estado activo del menú */
+.menu-toggle.active {
+    background-color: rgba(52, 152, 219, 0.15);
+    color: #2980b9;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    #main-nav {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+    }
+
+    #main-nav.active {
+        max-height: 300px;
+    }
+
+    #main-nav ul {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    #main-nav ul li {
+        margin: 8px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    #main-nav ul li a {
+        display: block;
+        padding: 8px 0;
+    }
+
+    header .container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+/* Responsive mejorado para dispositivos móviles */
+/* Animaciones y efectos para dispositivos móviles */
+.animado {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.aparece {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mobile-img {
+    filter: blur(5px);
+    transition: filter 0.5s ease;
+}
+
+.img-loaded {
+    filter: blur(0);
+}
+
+@media (max-width: 768px) {
+
+    /* Ajustes generales para dispositivos móviles */
+    body {
+        font-size: 16px;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+        position: relative;
+    }
+
+    /* Efecto de destello para títulos en móvil */
+    .section-title::before {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 3px;
+        background: linear-gradient(90deg, transparent, rgba(52, 152, 219, 0.7), transparent);
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: shineEffect 2s infinite;
+    }
+
+    @keyframes shineEffect {
+        0% {
+            width: 0;
+            opacity: 0;
+        }
+
+        50% {
+            width: 40px;
+            opacity: 1;
+        }
+
+        100% {
+            width: 0;
+            opacity: 0;
+        }
+    }
+
+    /* Header y navegación */
+    header {
+        padding: 10px 0;
+    }
+
+    header .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+        margin-bottom: 5px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 5px;
+    }
+
+    /* Sección Hero - Adaptación móvil mejorada */
+    .hero {
+        padding: 70px 0;
+        background-position: center center;
+        background-attachment: scroll;
+        /* Desactivar parallax en móvil para mejor rendimiento */
+        min-height: 40vh;
+    }
+
+    .hero::before {
+        background: radial-gradient(circle at center, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7));
+        /* Mejor contraste en móvil */
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+        padding: 0 10px;
+        /* Mejora de legibilidad en móvil */
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 1), 0 0 20px rgba(52, 152, 219, 0.8);
+        -webkit-text-stroke: 0.5px rgba(83, 189, 255, 0.4);
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+        padding: 0 15px;
+        margin-bottom: 25px;
+        max-width: 95%;
+        /* Mejorar la legibilidad en pantallas pequeñas */
+        line-height: 1.5;
+    }
+
+    .hero .btn {
+        padding: 12px 26px;
+        font-size: 0.95rem;
+        white-space: nowrap;
+    }
+
+    /* Productos - Mejora adaptación móvil */
+    .productos-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-width: 100%;
+        padding: 0 5px;
+    }
+
+    .producto {
+        margin-bottom: 15px;
+        transform: none !important;
+        /* Evitar problemas de rendimiento en móvil */
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .producto-img {
+        height: 180px;
+        /* Altura optimizada para móvil */
+    }
+
+    .producto-img img {
+        object-position: center center;
+    }
+
+    .producto-nombre {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+
+    .producto-descripcion {
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+        /* Propiedad estándar */
+        display: -webkit-box;
+        display: box;
+        /* Propiedad estándar */
+        -webkit-box-orient: vertical;
+        box-orient: vertical;
+        /* Propiedad estándar */
+        overflow: hidden;
+        line-height: 1.4;
+        max-height: 4.2em;
+        /* Aproximadamente 3 líneas */
+    }
+
+    .producto-caracteristicas li {
+        font-size: 0.85rem;
+        padding-left: 18px;
+    }
+
+    .producto-caracteristicas li i {
+        font-size: 0.8rem;
+        top: 3px;
+    }
+
+    /* Sección Ofertas */
+    .ofertas {
+        padding: 40px 0;
+    }
+
+    .ofertas-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .oferta {
+        padding: 20px;
+    }
+
+    /* Sección Nosotros */
+    .nosotros {
+        padding: 40px 0;
+    }
+
+    .nosotros-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    /* Sección Contacto */
+    .contacto {
+        padding: 40px 0;
+    }
+
+    .contacto-info {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contacto-metodo {
+        padding: 20px;
+    }
+
+    /* Footer - Mejorado para móviles */
+    footer {
+        padding: 25px 0 80px;
+        /* Espacio adicional en la parte inferior para el botón de WhatsApp */
+        background-color: #f5f5f5;
+        border-top: 1px solid #eaeaea;
+    }
+
+    footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer p {
+        margin-bottom: 15px;
+        font-size: 0.9rem;
+    }
+
+    .social-icons {
+        margin-top: 15px;
+        justify-content: center;
+        display: flex;
+        gap: 15px;
+    }
+
+    .social-icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: #3498db;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        transition: all 0.3s;
+    }
+
+    .social-icon:hover {
+        transform: translateY(-3px);
+    }
+
+    /* Botón flotante de WhatsApp */
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+/* Ajustes específicos para móviles muy pequeños */
+@media (max-width: 480px) {
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        padding: 10px 18px;
+        font-size: 0.9rem;
+    }
+
+    .producto-img {
+        height: 200px;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .nosotros-texto p {
+        font-size: 0.95rem;
+    }
+
+    .contacto-metodo {
+        padding: 15px;
+    }
+
+    .contacto-metodo h3 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Botón Ver más productos */
+#ver-mas-productos {
+    display: block;
+    margin: 20px auto;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#ver-mas-productos:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajustes adicionales para móviles */
+@media (max-width: 768px) {
+
+    /* Hacer las imágenes de productos más pequeñas */
+    .producto-img {
+        height: 200px;
+    }
+
+    /* Reducir el tamaño de la fuente en productos */
+    .producto-nombre {
+        font-size: 1.1rem;
+    }
+
+    .producto-descripcion {
+        font-size: 0.9rem;
+    }
+
+    .producto-precio {
+        font-size: 1.1rem;
+    }
+
+    /* Hacer que los botones ocupen todo el ancho */
+    .producto-acciones .btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 0.95rem;
+        border-radius: 25px;
+        margin-top: 5px;
+    }
+
+    /* Efecto táctil mejorado para móviles */
+    .btn,
+    .producto,
+    .contacto-metodo,
+    .social-icon,
+    .whatsapp-float {
+        -webkit-tap-highlight-color: transparent;
+        /* Eliminar destello táctil */
+    }
+
+    .btn:active,
+    .social-icon:active,
+    .whatsapp-float:active {
+        transform: scale(0.95);
+        /* Efecto de presión */
+        transition: transform 0.1s ease;
+    }
+
+    /* Mejorar espaciado y rendimiento en secciones */
+    .section-title {
+        margin-bottom: 20px;
+    }
+
+    section {
+        padding: 40px 0;
+        will-change: transform;
+        /* Optimización de rendimiento */
+    }
+
+    /* Ajustar el botón flotante de WhatsApp */
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        right: 15px;
+        bottom: 15px;
+    }
+
+    /* Ocultar algunos elementos decorativos en móvil */
+    .section-title::after {
+        width: 60px;
+    }
+}
+
+/* Mejoras para tablets */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .productos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ofertas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Optimizaciones de rendimiento para carga en dispositivos móviles */
+@media (max-width: 768px) {
+    img {
+        transition: none;
+    }
+
+    .producto:hover {
+        transform: none;
+    }
+
+    .producto:hover .producto-img img {
+        transform: none;
+    }
+}
